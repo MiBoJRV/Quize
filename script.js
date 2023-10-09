@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = {};
 
 
+
 //   //Login
 //   let logInButton = document.querySelector('.login-btn');
 //   let formFields = document.querySelector('.form-fields');
@@ -86,12 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // Перевірити, чи обраний пункт має поле введення з відповідними атрибутами
             const inputField = btnField.querySelector('input[type="text"][placeholder="Other (please specify)"]');
 
-            // Якщо обраний пункт має поле введення, не додавати клас "active"
-            // if (inputField && btnField.contains(inputField)) {
-            //     console.log('Ви вибрали пункт з полем введення');
-            //     // return;
-            // }
-
             // Отримати текст з обраного пункту
             if (btnField.querySelector('p')) {
             const selectedText = btnField.querySelector('p').textContent;
@@ -99,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if (btnField.querySelector('input')) {
                 const inputText = btnField.querySelector('input').value;
-                if (inputText != '') {
+                if (inputText !== '') {
                     console.log(`Ви вибрали пункт input: ${inputText}`);
                 }
                 else {
@@ -122,13 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const steps = document.querySelectorAll('.step');
     let activeIndex = 0;
 
-    // function setActiveStep() {
-    //     steps.forEach(step => {
-    //         step.classList.remove('active');
-    //     });
-    //
-    //     steps[activeIndex].classList.add('active');
-    // }
     function setActiveStep() {
         steps.forEach((step, index) => {
             step.classList.remove('active');
@@ -199,15 +187,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function storeDada() {
-        const section_1 = "1.1. Please rate your initial experience with our agent on a scale from 1 to 10, with 1 being the lowest and 10 being the highest.";
-        const section_1_2 = "What aspects of your conversation with our agent positively contributed to your trust?";
-        const section_2_1 = "2.1. Are you aware that the next step in our process involves working with our legal adviser?";
-        const section_2_2 = "2.2. What are your expectations for the legal adviser who will assist you with fund recovery?";
-        const section_3_1 = "3.1. What could we do to make you feel more comfortable and trusting during your interaction with our legal adviser?";
-        const section_3_2 = "3.2. Would you like to receive additional information or resources about the fund recovery process, the technologies we use, or the technical staff involved in your case?";
-        const section_4_1 = "4.1. Is there anything else you'd like to share with us regarding your experience or expectations for the fund recovery process?";
-        const section_5_1 = "5.1. How would you prefer to be contacted by the legal adviser during the fund recovery process?";
+        // const section_1 = "1.1. Please rate your initial experience with our agent on a scale from 1 to 10, with 1 being the lowest and 10 being the highest.";
+        // const section_1_2 = "What aspects of your conversation with our agent positively contributed to your trust?";
+        // const section_2_1 = "2.1. Are you aware that the next step in our process involves working with our legal adviser?";
+        // const section_2_2 = "2.2. What are your expectations for the legal adviser who will assist you with fund recovery?";
+        // const section_3_1 = "3.1. What could we do to make you feel more comfortable and trusting during your interaction with our legal adviser?";
+        // const section_3_2 = "3.2. Would you like to receive additional information or resources about the fund recovery process, the technologies we use, or the technical staff involved in your case?";
+        // const section_4_1 = "4.1. Is there anything else you'd like to share with us regarding your experience or expectations for the fund recovery process?";
+        // const section_5_1 = "5.1. How would you prefer to be contacted by the legal adviser during the fund recovery process?";
+        const email = document.querySelector('#email').value;
+        console.log(email.value)
     }
+
+
+    // function storeDataStep1() {
+    //     const emailInput = document.getElementById('email');
+    // }
+    // function storeDataStep2() {
+    //
+    // }
+    // function storeDataStep3() {
+    //
+    // }
+
+
     function sendData() {
         console.log(data);
     }
@@ -251,3 +254,67 @@ document.addEventListener('DOMContentLoaded', () => {
     //END
 });
 
+
+
+
+
+
+
+
+const nextButton = document.querySelector('.next-button.start');
+
+// Добавить обработчик события для клика на кнопку "NEXT"
+nextButton.addEventListener('click', function() {
+
+// Создаем объект data
+let data = {};
+
+// Шаг 1: Найти email и передать значение в объект data
+const emailInput = document.getElementById("email");
+data.email = emailInput.value;
+
+// Шаг 2: Найти emoji active и передать в объект data
+const activeEmoji = document.querySelector(".emoji-icon.active img");
+if (activeEmoji) {
+    data.emoji = activeEmoji.getAttribute("data-emoji");
+}
+
+// Шаг 3: Найти btn-field active и передать в объект data
+const activeBtnFieldsStep3 = document.querySelectorAll(".step-3 .btn-field.active");
+data.step3 = [];
+activeBtnFieldsStep3.forEach(btn => {
+    data.step3.push(btn.querySelector("p").getAttribute("data-1.2"));
+});
+
+// Шаг 4: Найти btn-field active и передать в объект data
+const activeBtnFieldsStep4 = document.querySelectorAll(".step-4 .btn-field.active p");
+data.step4 = Array.from(activeBtnFieldsStep4).map(btn => btn.textContent);
+
+// Шаг 5: Найти btn-field active и передать в объект data
+const activeBtnFieldsStep5 = document.querySelectorAll(".step-5 .btn-field.active p");
+data.step5 = Array.from(activeBtnFieldsStep5).map(btn => btn.textContent);
+
+// Шаг 6: Найти textarea и передать значение в объект data
+const textAreaStep6 = document.querySelector(".step-6 textarea");
+data.step6 = textAreaStep6.value;
+
+// Шаг 7: Найти btn-field active и передать в объект data
+const activeBtnFieldsStep7 = document.querySelectorAll(".step-7 .btn-field.active p");
+data.step7 = Array.from(activeBtnFieldsStep7).map(btn => btn.textContent);
+
+// Шаг 8: Найти textarea и передать значение в объект data
+const textAreaStep8 = document.querySelector(".step-8 textarea");
+data.step8 = textAreaStep8.value;
+
+// Шаг 9: Найти btn-field active или input value и передать в объект data
+const activeBtnFieldsStep9 = document.querySelectorAll(".step-9 .btn-field.active p");
+if (activeBtnFieldsStep9.length > 0) {
+    data.step9 = Array.from(activeBtnFieldsStep9).map(btn => btn.textContent);
+} else {
+    const otherInputStep9 = document.querySelector(".step-9 .btn-field input");
+    data.step9 = otherInputStep9.value;
+}
+
+// Шаг 10: Вывести объект data в консоль
+console.log(data);
+});
