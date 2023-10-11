@@ -58,6 +58,16 @@
   display: none;
 }
 
+.err {
+  position: absolute;
+  bottom: 0;
+  color: red !important;
+  margin: 0 !important;
+}
+.err.stet-2 {
+  bottom: -50px;
+}
+
 .logo {
   position: absolute;
   right: 0;
@@ -240,6 +250,7 @@
 .stepper .step-1-content {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .stepper .step-1-content p {
   color: #2B2468;
