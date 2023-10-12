@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    const main = document.querySelector('main');
     const mainContent = document.querySelector('.main_content');
     const sliderButtons = document.querySelector('.slider-btn');
     const steps = document.querySelectorAll('.step');
@@ -17,6 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let activeIndex = 0;
 
     function setActiveStep() {
+        steps.forEach((step, index) => {
+            step.classList.toggle('active', index === activeIndex);
+            main.classList.toggle(`step-${index + 1}`, index === activeIndex);
+        });
         steps.forEach((step, index) => {
             step.classList.toggle('active', index === activeIndex);
             mainContent.classList.toggle(`step-${index + 1}`, index === activeIndex);
