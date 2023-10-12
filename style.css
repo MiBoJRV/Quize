@@ -534,8 +534,16 @@ main.step-11 .right-clouds {
   bottom: 0;
   color: red !important;
   margin: 0 !important;
+  font-size: 24px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
 }
-.err.stet-2 {
+.err.step-2 {
+  bottom: -50px;
+}
+.err.step-3, .err.step-4, .err.step-5, .err.step-6, .err.step-7, .err.step-8, .err.step-9 {
+  max-width: 600px;
   bottom: -50px;
 }
 

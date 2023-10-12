@@ -774,8 +774,24 @@ main {
   bottom: 0;
   color: red !important;
   margin: 0 !important;
+  font-size: 24px!important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
 
-  &.stet-2 {
+  &.step-2 {
+    bottom: -50px;
+  }
+
+  &.step-3,
+  &.step-4,
+  &.step-5,
+  &.step-6,
+  &.step-7,
+  &.step-8,
+  &.step-9 {
+    //position: relative;
+    max-width: 600px;
     bottom: -50px;
   }
 }
@@ -824,6 +840,7 @@ main {
       }
     }
   }
+
   &.step-3,
   &.step-4,
   &.step-5,
@@ -832,8 +849,7 @@ main {
   &.step-8,
   &.step-9,
   &.step-10,
-  &.step-11
-  {
+  &.step-11 {
     .step-image {
       &.step-1 {
         display: none;
