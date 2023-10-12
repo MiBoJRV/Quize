@@ -49,9 +49,103 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     prevButton.addEventListener('click', () => {
+        if (activeIndex === 0) {
+            //----------//
+            const stepContent = document.querySelector('.step-1-content');
+            stepContent.style.opacity = '1'
+
+            //----------//
+        }
+
+        if (activeIndex === 1) {
+            //----------//
+            const stepContent = document.querySelector('.step-2-content');
+            stepContent.style.opacity = '0'
+            //----------//
+        }
+
+        if (activeIndex === 2) {
+
+            //----------//
+            const stepContent = document.querySelector('.step-3-content');
+            stepContent.style.opacity = '0'
+            //----------//
+        }
+        if (activeIndex === 3) {
+
+            //----------//
+            const stepContent = document.querySelector('.step-4-content');
+            stepContent.style.opacity = '0'
+            //----------//
+        }
+        if (activeIndex === 4) {
+
+            //----------//
+            const stepContent = document.querySelector('.step-5-content');
+            stepContent.style.opacity = '0'
+            //----------//
+        }
+
+        if (activeIndex === 5) {
+
+            //----------//
+            const stepContent = document.querySelector('.step-6-content');
+            stepContent.style.opacity = '0'
+            //----------//
+        }
+
+        if (activeIndex === 6) {
+
+            //----------//
+            const stepContent = document.querySelector('.step-7-content');
+            stepContent.style.opacity = '0'
+            //----------//
+        }
+
+        if (activeIndex === 7) {
+
+            //----------//
+            const stepContent = document.querySelector('.step-8-content');
+            stepContent.style.opacity = '0'
+            //----------//
+        }
+        if (activeIndex === 8) {
+
+            //----------//
+            const stepContent = document.querySelector('.step-9-content');
+            stepContent.style.opacity = '0'
+            //----------//
+        }
+        if (activeIndex === 9) {
+
+            //----------//
+            const stepContent = document.querySelector('.step-10-content');
+            stepContent.style.opacity = '0'
+            //----------//
+        }
+        if (activeIndex === 10) {
+
+            //----------//
+            const stepContent = document.querySelector('.step-11-content');
+            stepContent.style.opacity = '0'
+            //----------//
+        }
+
+
         if (activeIndex > 0) {
             activeIndex--;
-            setActiveStep();
+
+            // const stepContent = document.querySelectorAll('.step > div');
+            // stepContent.forEach((step) => {
+            //     step.style.opacity = '0';
+            // });
+
+            // stepContent.style.opacity = '0'
+            setTimeout(() => {
+                setActiveStep();
+            }, 500);
+
+            // setActiveStep();
         }
     });
 
@@ -211,6 +305,7 @@ document.addEventListener('DOMContentLoaded', function () {
     nextButton.addEventListener('click', () => {
 
         if (activeIndex === 0) {
+
             console.log('step-1', 'activeIndex - ', activeIndex);
             const email = emailInput.value.trim();
             if (!email || !isEmailValid(email)) {
@@ -218,9 +313,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 errorMessage.textContent = 'To continue you need to enter e-mail address';
                 return;
             }
+            //----------//
+            const stepContent = document.querySelector('.step-2-content');
+            stepContent.style.opacity = '0'
+            setTimeout(() => {
+                stepContent.style.opacity = '1'
+            }, 1500);
+            //----------//
         }
 
         if (activeIndex === 1) {
+
             console.log('step-2', 'activeIndex - ', activeIndex);
             let emojiSelected = false;
 
@@ -235,6 +338,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 errorMessage.textContent = 'To continue you need to choose 1 option from the provided answers';
                 return;
             }
+            //----------//
+            const stepContent = document.querySelector('.step-3-content');
+            stepContent.style.opacity = '0'
+            setTimeout(() => {
+                stepContent.style.opacity = '1'
+            }, 1500);
+            //----------//
         }
 
         if (activeIndex === 2) {
@@ -252,6 +362,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 errorMessage.textContent = 'To continue you need to choose 1 option from the provided answers';
                 return;
             }
+            //----------//
+            const stepContent = document.querySelector('.step-4-content');
+            stepContent.style.opacity = '0'
+            setTimeout(() => {
+                stepContent.style.opacity = '1'
+            }, 1500);
+            //----------//
         }
 
         if (activeIndex === 3) {
@@ -269,6 +386,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 errorMessage.textContent = 'To continue you need to choose 1 option from the provided answers';
                 return;
             }
+            //----------//
+            const stepContent = document.querySelector('.step-5-content');
+            stepContent.style.opacity = '0'
+            setTimeout(() => {
+                stepContent.style.opacity = '1'
+            }, 1500);
+            //----------//
         }
 
         if (activeIndex === 4) {
@@ -286,6 +410,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 errorMessage.textContent = 'To continue you need to choose 1 option from the provided answers';
                 return;
             }
+            //----------//
+            const stepContent = document.querySelector('.step-6-content');
+            stepContent.style.opacity = '0'
+            setTimeout(() => {
+                stepContent.style.opacity = '1'
+            }, 1500);
+            //----------//
         }
 
         if (activeIndex === 5) {
@@ -310,6 +441,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 errorMessage.textContent = 'To continue you need to fill in the answer field (at least 20 characters).';
                 return;
             }
+            //----------//
+            const stepContent = document.querySelector('.step-7-content');
+            stepContent.style.opacity = '0'
+            setTimeout(() => {
+                stepContent.style.opacity = '1'
+            }, 1500);
+            //----------//
         }
 
         if (activeIndex === 6) {
@@ -327,6 +465,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 errorMessage.textContent = 'To continue you need to choose 1 option from the provided answers';
                 return;
             }
+            //----------//
+            const stepContent = document.querySelector('.step-8-content');
+            stepContent.style.opacity = '0'
+            setTimeout(() => {
+                stepContent.style.opacity = '1'
+            }, 1500);
+            //----------//
         }
 
         if (activeIndex === 7) {
@@ -356,11 +501,18 @@ document.addEventListener('DOMContentLoaded', function () {
             //     errorMessage.textContent = 'To continue you need to fill in the answer field (at least 20 characters).';
             //
             // }
-            if (!textareaValid){
+            if (!textareaValid) {
                 const errorMessage = document.querySelector('.step-8 .err.step-8');
                 errorMessage.textContent = 'To continue you need to fill in the answer field (at least 20 characters).';
                 return;
             }
+            //----------//
+            const stepContent = document.querySelector('.step-9-content');
+            stepContent.style.opacity = '0'
+            setTimeout(() => {
+                stepContent.style.opacity = '1'
+            }, 1500);
+            //----------//
         }
 
         if (activeIndex === 8) {
@@ -383,7 +535,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (activeIndex < steps.length - 1) {
             activeIndex++;
-            setActiveStep();
+            setTimeout(() => {
+                setActiveStep();
+            }, 500);
+            // setActiveStep();
         }
     });
 

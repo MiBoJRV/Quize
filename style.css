@@ -581,6 +581,16 @@ main.step-2 .step-image.step-1 {
   right: -1000px;
   transition: right 3s ease, bottom 3s ease;
 }
+main .step-3-content {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 2s ease, opacity 2s ease;
+}
+main.step-3 .step-3-content {
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 2s ease, opacity 2s ease;
+}
 main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .step-image.step-1, main.step-6 .step-image.step-1, main.step-7 .step-image.step-1, main.step-8 .step-image.step-1, main.step-9 .step-image.step-1, main.step-10 .step-image.step-1, main.step-11 .step-image.step-1 {
   display: none;
 }
@@ -656,11 +666,39 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 .stepper {
   width: 100%;
   position: relative;
+  /* .step-2 {
+     .step-2-content {
+       visibility: hidden;
+       opacity: 0;
+       transition: visibility 2s ease, opacity 2s ease;
+     }
+
+     &.active {
+       .step-2-content {
+         visibility: visible;
+         opacity: 1;
+         transition: visibility 2s ease, opacity 2s ease;
+       }
+     }
+   }
+   .step-3 {
+     .step-3-content {
+       visibility: hidden;
+       opacity: 0;
+       transition: visibility 2s ease, opacity 2s ease;
+     }
+
+     &.active {
+       .step-3-content {
+         visibility: visible;
+         opacity: 1;
+         transition: visibility 2s ease, opacity 2s ease;
+       }
+     }
+   }*/
 }
 .stepper .step {
   display: none;
-  visibility: hidden;
-  opacity: 0;
   flex-direction: column;
   align-items: center;
   position: relative;
@@ -668,13 +706,11 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 }
 .stepper .step {
   display: none;
-  visibility: hidden;
-  opacity: 0;
+  transition: opacity 1s ease;
 }
-.stepper .active {
+.stepper .step.active {
   display: flex;
-  visibility: visible;
-  opacity: 1;
+  transition: opacity 1s ease;
 }
 .stepper h1 {
   color: #1D0370;
@@ -841,6 +877,8 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 .stepper .step-2-content {
   position: relative;
   width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 .stepper .step-2-content h2 {
   margin-bottom: 90px;
@@ -898,6 +936,8 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 .stepper .step-3-content {
   position: relative;
   width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 .stepper .step-3-content h2 {
   height: 30px;
@@ -923,6 +963,8 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 }
 .stepper .step-4-content {
   width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 .stepper .step-4-content h2 {
   margin-bottom: 90px;
@@ -944,6 +986,10 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 .stepper .step-4-content .btn-field {
   max-width: 150px;
 }
+.stepper .step-5-content {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
 .stepper .step-5-content h2 {
   height: 30px;
   visibility: hidden;
@@ -951,6 +997,10 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 }
 .stepper .step-5-content .btn-field {
   max-width: 650px;
+}
+.stepper .step-6-content {
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 .stepper .step-6-content .input-textarea {
   margin-top: 60px;
@@ -978,6 +1028,10 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   padding-bottom: 12px;
   color: rgba(131, 130, 139, 0.5);
 }
+.stepper .step-7-content {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
 .stepper .step-7-content h2 {
   height: 30px;
   visibility: hidden;
@@ -985,6 +1039,10 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 }
 .stepper .step-7-content .btn-field {
   max-width: 190px;
+}
+.stepper .step-8-content {
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 .stepper .step-8-content .input-textarea {
   margin-top: 60px;
@@ -1010,6 +1068,10 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   border-bottom: 1px solid #2B2468;
   padding-bottom: 12px;
   color: rgba(131, 130, 139, 0.5);
+}
+.stepper .step-9-content {
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 .stepper .step-9-content .btn-field:hover input {
   background: #2A0091;
