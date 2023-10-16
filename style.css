@@ -17,12 +17,40 @@
   font-family: "Liberation Sans", sans-serif;
   list-style: none;
   text-decoration: none;
+  outline: 1px solid red;
 }
 
 main {
   position: relative;
   max-height: 1080px;
   overflow: hidden;
+}
+main .thank-you {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+main .thank-you img {
+  position: absolute;
+  transition: left 2s ease 0s, bottom 2s ease 0s, right 2s ease 0s, opacity 1s ease;
+}
+main .thank-you .th-1 {
+  z-index: 7;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+main .thank-you .th-2 {
+  z-index: 8;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+main .thank-you .th-3 {
+  z-index: 9;
+  right: 50%;
+  transform: translateX(50%);
+  opacity: 0;
 }
 main .left-clouds {
   position: absolute;
@@ -154,8 +182,17 @@ main.step-9 .left-clouds .clt-3 {
   left: -929px;
   top: -203px;
 }
-main.step-10 .left-clouds {
-  display: none;
+main.step-10 .left-clouds .clt-1 {
+  left: -1246px;
+  top: -810px;
+}
+main.step-10 .left-clouds .clt-2 {
+  left: -1246px;
+  top: -810px;
+}
+main.step-10 .left-clouds .clt-3 {
+  left: -1246px;
+  top: -810px;
 }
 main.step-11 .left-clouds {
   display: none;
@@ -367,7 +404,7 @@ main.step-6 .right-clouds .crb-3 {
 }
 main.step-6 .right-clouds .crb-4 {
   right: -371px;
-  bottom: 17px;
+  bottom: -17px;
 }
 main.step-6 .right-clouds .crb-5 {
   right: 135px;
@@ -375,7 +412,7 @@ main.step-6 .right-clouds .crb-5 {
 }
 main.step-6 .right-clouds .crb-6 {
   right: 200px;
-  bottom: -4977px;
+  bottom: -497px;
 }
 main.step-6 .right-clouds .crb-7 {
   right: 252px;
@@ -463,7 +500,7 @@ main.step-9 .right-clouds .crb-3 {
 }
 main.step-9 .right-clouds .crb-4 {
   right: -371px;
-  bottom: 17px;
+  bottom: -17px;
 }
 main.step-9 .right-clouds .crb-5 {
   right: 135px;
@@ -471,7 +508,7 @@ main.step-9 .right-clouds .crb-5 {
 }
 main.step-9 .right-clouds .crb-6 {
   right: 200px;
-  bottom: -4977px;
+  bottom: -497px;
 }
 main.step-9 .right-clouds .crb-7 {
   right: 252px;
@@ -481,11 +518,62 @@ main.step-9 .right-clouds .crb-8 {
   right: 294px;
   bottom: -438px;
 }
-main.step-10 .right-clouds {
-  display: none;
+main.step-10 .right-clouds .crb-1 {
+  right: -1246px;
+  bottom: -810px;
+}
+main.step-10 .right-clouds .crb-2 {
+  right: -1246px;
+  bottom: -810px;
+}
+main.step-10 .right-clouds .crb-3 {
+  right: -1246px;
+  bottom: -810px;
+}
+main.step-10 .right-clouds .crb-4 {
+  right: -1246px;
+  bottom: -810px;
+}
+main.step-10 .right-clouds .crb-5 {
+  right: -1246px;
+  bottom: -810px;
+}
+main.step-10 .right-clouds .crb-6 {
+  right: -1246px;
+  bottom: -810px;
+}
+main.step-10 .right-clouds .crb-7 {
+  right: -1246px;
+  bottom: -810px;
+}
+main.step-10 .right-clouds .crb-8 {
+  right: -1246px;
+  bottom: -810px;
 }
 main.step-11 .right-clouds {
   display: none;
+}
+main.step-11 .th-1 {
+  z-index: 7;
+  left: -449px;
+  bottom: -405px;
+  opacity: 1;
+  transform: none;
+}
+main.step-11 .th-2 {
+  z-index: 8;
+  left: 38px;
+  bottom: -324px;
+  opacity: 1;
+  transform: none;
+}
+main.step-11 .th-3 {
+  z-index: 9;
+  right: -349px;
+  bottom: -139px;
+  opacity: 1;
+  transform: none;
+  left: auto;
 }
 
 .main_content {
@@ -495,9 +583,19 @@ main.step-11 .right-clouds {
   height: 100vh;
   position: relative;
   max-height: 1080px;
+  padding: 0 15px;
 }
 .main_content .step-10-img {
   display: none;
+  z-index: 10;
+}
+.main_content .step-10-img-anim img {
+  position: absolute;
+  bottom: -700px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: bottom 2s ease;
+  opacity: 0;
 }
 .main_content.step-10 .step-image {
   display: none;
@@ -505,9 +603,24 @@ main.step-11 .right-clouds {
 .main_content.step-10 .step-10-img {
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: -63px;
   left: 50%;
   transform: translateX(-50%);
+}
+.main_content.step-10 .step-10-img-anim .anim-10-1 {
+  z-index: 9;
+  bottom: 0;
+  opacity: 1;
+}
+.main_content.step-10 .step-10-img-anim .anim-10-2 {
+  z-index: 8;
+  bottom: 11px;
+  opacity: 1;
+}
+.main_content.step-10 .step-10-img-anim .anim-10-3 {
+  z-index: 7;
+  bottom: 67px;
+  opacity: 1;
 }
 .main_content.step-10 .slider-btn .prev-button {
   border-radius: 100px;
@@ -564,7 +677,6 @@ main.step-11 .right-clouds {
   bottom: 192px;
   right: 0;
 }
-
 main .step-1 .step-image {
   bottom: -1000px;
   right: -1000px;
@@ -576,6 +688,16 @@ main .step-1 .step-image.step-1 {
   right: 0;
   transition: right 2s ease, bottom 2s ease;
 }
+@media only screen and (max-width: 1200px) {
+  main .step-1 .step-image.step-1 {
+    width: 50%;
+  }
+  main .step-1 .step-image.step-1 img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
 main.step-2 .step-image.step-1 {
   bottom: -1000px;
   right: -1000px;
@@ -584,12 +706,12 @@ main.step-2 .step-image.step-1 {
 main .step-3-content {
   opacity: 0;
   visibility: hidden;
-  transition: visibility 2s ease, opacity 2s ease;
+  transition: visibility 0.5s ease, opacity 0.5s ease;
 }
 main.step-3 .step-3-content {
   opacity: 1;
   visibility: visible;
-  transition: visibility 2s ease, opacity 2s ease;
+  transition: visibility 0.5s ease, opacity 0.5s ease;
 }
 main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .step-image.step-1, main.step-6 .step-image.step-1, main.step-7 .step-image.step-1, main.step-8 .step-image.step-1, main.step-9 .step-image.step-1, main.step-10 .step-image.step-1, main.step-11 .step-image.step-1 {
   display: none;
@@ -599,6 +721,7 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   transform: translateY(-50%);
   position: relative;
   top: 50%;
+  z-index: 999;
 }
 .slider-btn {
   position: absolute;
@@ -706,11 +829,11 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 }
 .stepper .step {
   display: none;
-  transition: opacity 1s ease;
+  transition: opacity 0.5s ease;
 }
 .stepper .step.active {
   display: flex;
-  transition: opacity 1s ease;
+  transition: opacity 0.5s ease;
 }
 .stepper h1 {
   color: #1D0370;
@@ -760,7 +883,9 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   cursor: pointer;
   transition: background 0.5s, color 0.5s;
   text-align: left;
-  display: block;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 .stepper .step .btn-field:hover {
   border-radius: 10px;
@@ -798,6 +923,19 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   display: flex;
   align-items: center;
   position: relative;
+}
+@media only screen and (max-width: 1200px) {
+  .stepper .step-1-content .text {
+    width: 50%;
+  }
+  .stepper .step-1-content .image-main {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .stepper .step-1-content {
+    flex-direction: column;
+  }
 }
 .stepper .step-1-content p {
   color: #2B2468;
@@ -937,7 +1075,7 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   position: relative;
   width: 100%;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.2s ease;
 }
 .stepper .step-3-content h2 {
   height: 30px;
@@ -957,6 +1095,9 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   flex-direction: column;
   gap: 20px;
 }
+.stepper .step-3-content .btn-field {
+  transition: max-width 0.5s ease;
+}
 .stepper .step-3-content .image {
   text-align: right;
   margin-top: -311px;
@@ -964,7 +1105,7 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 .stepper .step-4-content {
   width: 100%;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.2s ease;
 }
 .stepper .step-4-content h2 {
   margin-bottom: 90px;
@@ -984,7 +1125,8 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   gap: 20px;
 }
 .stepper .step-4-content .btn-field {
-  max-width: 150px;
+  max-width: 600px;
+  transition: max-width 0.5s ease;
 }
 .stepper .step-5-content {
   opacity: 0;
@@ -997,6 +1139,13 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 }
 .stepper .step-5-content .btn-field {
   max-width: 650px;
+  transition: max-width 0.5s ease;
+}
+.stepper .step-5-content .btn-field:nth-child(1) {
+  max-width: 150px;
+}
+.stepper .step-5-content .btn-field:nth-child(2) {
+  max-width: 150px;
 }
 .stepper .step-6-content {
   opacity: 0;
@@ -1004,10 +1153,9 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 }
 .stepper .step-6-content .input-textarea {
   margin-top: 60px;
+  position: relative;
 }
 .stepper .step-6-content .input-textarea textarea {
-  width: 518px;
-  height: 378px;
   resize: none;
   border-radius: 10px;
   background: #FFF;
@@ -1019,9 +1167,11 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   font-weight: 700;
   line-height: normal;
   padding: 30px 25px;
-  margin-left: 100px;
   border: none;
   outline: none;
+  transition: height 0.5s ease, max-width 0.5s ease;
+  height: 60px;
+  max-width: 650px;
 }
 .stepper .step-6-content .input-textarea textarea::placeholder {
   border-bottom: 1px solid #2B2468;
@@ -1039,6 +1189,11 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 }
 .stepper .step-7-content .btn-field {
   max-width: 190px;
+  transition: max-width 0.5s ease, height 0.5s ease;
+}
+.stepper .step-7-content .btn-field:nth-child(1) {
+  max-width: 518px;
+  height: 378px;
 }
 .stepper .step-8-content {
   opacity: 0;
@@ -1048,8 +1203,6 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   margin-top: 60px;
 }
 .stepper .step-8-content .input-textarea textarea {
-  width: 518px;
-  height: 378px;
   resize: none;
   border-radius: 10px;
   background: #FFF;
@@ -1061,8 +1214,10 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   font-weight: 700;
   line-height: normal;
   padding: 30px 25px;
-  margin-left: 100px;
   border: none;
+  transition: height 0.5s ease, max-width 0.5s ease;
+  height: 60px;
+  max-width: 190px;
 }
 .stepper .step-8-content .input-textarea textarea::placeholder {
   border-bottom: 1px solid #2B2468;
@@ -1072,6 +1227,10 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 .stepper .step-9-content {
   opacity: 0;
   transition: opacity 0.5s ease;
+}
+.stepper .step-9-content .btn-field {
+  max-width: 350px;
+  transition: max-width 0.5s ease, height 0.5s ease;
 }
 .stepper .step-9-content .btn-field:hover input {
   background: #2A0091;
@@ -1093,8 +1252,16 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 .stepper .step-9-content input::placeholder {
   color: #000;
 }
+.stepper .step-10-content {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
 .stepper .step-10-content p {
   max-width: 572px;
+}
+.stepper .step-11-content {
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 .stepper .step-11-content h2 {
   color: #309;

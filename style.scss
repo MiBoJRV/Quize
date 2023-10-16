@@ -19,6 +19,7 @@
   font-family: 'Liberation Sans', sans-serif;
   list-style: none;
   text-decoration: none;
+  outline: 1px solid red;
 }
 
 body {
@@ -29,6 +30,39 @@ main {
   position: relative;
   max-height: 1080px;
   overflow: hidden;
+
+  .thank-you {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    img {
+      position: absolute;
+
+      transition: left 2s ease 0s, bottom 2s ease 0s, right 2s ease 0s, opacity 1s ease;
+    }
+
+    .th-1 {
+      z-index: 7;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+    }
+
+    .th-2 {
+      z-index: 8;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+    }
+
+    .th-3 {
+      z-index: 9;
+      right: 50%;
+      transform: translateX(50%);
+      opacity: 0;
+    }
+  }
 
   .left-clouds {
     position: absolute;
@@ -237,8 +271,22 @@ main {
   }
 
   &.step-10 {
+
     .left-clouds {
-      display: none;
+      .clt-1 {
+        left: -1246px;
+        top: -810px;
+      }
+
+      .clt-2 {
+        left: -1246px;
+        top: -810px;
+      }
+
+      .clt-3 {
+        left: -1246px;
+        top: -810px;
+      }
     }
   }
 
@@ -537,7 +585,7 @@ main {
 
       .crb-4 {
         right: -371px;
-        bottom: 17px;
+        bottom: -17px;
       }
 
       .crb-5 {
@@ -547,7 +595,7 @@ main {
 
       .crb-6 {
         right: 200px;
-        bottom: -4977px;
+        bottom: -497px;
       }
 
       .crb-7 {
@@ -671,7 +719,7 @@ main {
 
       .crb-4 {
         right: -371px;
-        bottom: 17px;
+        bottom: -17px;
       }
 
       .crb-5 {
@@ -681,7 +729,7 @@ main {
 
       .crb-6 {
         right: 200px;
-        bottom: -4977px;
+        bottom: -497px;
       }
 
       .crb-7 {
@@ -698,7 +746,46 @@ main {
 
   &.step-10 {
     .right-clouds {
-      display: none;
+      .crb-1 {
+        right: -1246px;
+        bottom: -810px;
+      }
+
+      .crb-2 {
+        right: -1246px;
+        bottom: -810px;
+      }
+
+      .crb-3 {
+        right: -1246px;
+        bottom: -810px;
+      }
+
+      .crb-4 {
+        right: -1246px;
+        bottom: -810px;
+      }
+
+      .crb-5 {
+        right: -1246px;
+        bottom: -810px;
+      }
+
+      .crb-6 {
+        right: -1246px;
+        bottom: -810px;
+      }
+
+      .crb-7 {
+        right: -1246px;
+        bottom: -810px;
+      }
+
+      .crb-8 {
+        right: -1246px;
+        bottom: -810px;
+      }
+
     }
   }
 
@@ -706,7 +793,33 @@ main {
     .right-clouds {
       display: none;
     }
+
+    .th-1 {
+      z-index: 7;
+      left: -449px;
+      bottom: -405px;
+      opacity: 1;
+      transform: none;
+    }
+
+    .th-2 {
+      z-index: 8;
+      left: 38px;
+      bottom: -324px;
+      opacity: 1;
+      transform: none;
+    }
+
+    .th-3 {
+      z-index: 9;
+      right: -349px;
+      bottom: -139px;
+      opacity: 1;
+      transform: none;
+      left: auto;
+    }
   }
+
 }
 
 
@@ -717,9 +830,33 @@ main {
   height: 100vh;
   position: relative;
   max-height: 1080px;
+  padding: 0 15px;
+
+  //&.step-3 {
+  //  .bfg-4 {
+  //    .btn-field {
+  //    max-width: 600px;
+  //  }
+  //  }
+  //}
 
   .step-10-img {
     display: none;
+    z-index: 10;
+  }
+
+  .step-10-img-anim {
+    //display: none;
+
+    img {
+      position: absolute;
+      bottom: -700px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: bottom 2s ease;
+      opacity: 0;
+    }
+
   }
 
   &.step-10 {
@@ -730,13 +867,34 @@ main {
     .step-10-img {
       display: block;
       position: absolute;
-      bottom: 0;
+      bottom: -63px;
       left: 50%;
       transform: translateX(-50%);
     }
 
-    .slider-btn {
+    .step-10-img-anim {
+      //display: block;
 
+      .anim-10-1 {
+        z-index: 9;
+        bottom: 0;
+        opacity: 1;
+      }
+
+      .anim-10-2 {
+        z-index: 8;
+        bottom: 11px;
+        opacity: 1;
+      }
+
+      .anim-10-3 {
+        z-index: 7;
+        bottom: 67px;
+        opacity: 1;
+      }
+    }
+
+    .slider-btn {
       .prev-button {
         border-radius: 100px;
         border: 1px solid #09024B;
@@ -812,6 +970,10 @@ main {
     position: absolute;
     bottom: 192px;
     right: 0;
+
+    @media only screen and (max-width: 1200px) {
+
+    }
   }
 }
 
@@ -827,6 +989,16 @@ main {
         bottom: 192px;
         right: 0;
         transition: right 2s ease, bottom 2s ease;
+
+        @media only screen and (max-width: 1200px) {
+          width: 50%;
+
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+          }
+        }
       }
     }
   }
@@ -846,14 +1018,14 @@ main {
   .step-3-content {
     opacity: 0;
     visibility: hidden;
-    transition: visibility 2s ease, opacity 2s ease;
+    transition: visibility 0.5s ease, opacity 0.5s ease;
   }
 
   &.step-3 {
     .step-3-content {
       opacity: 1;
       visibility: visible;
-      transition: visibility 2s ease, opacity 2s ease;
+      transition: visibility 0.5s ease, opacity 0.5s ease;
     }
   }
 
@@ -879,6 +1051,7 @@ main {
   transform: translateY(-50%);
   position: relative;
   top: 50%;
+  z-index: 999;
 
   &-btn {
     &.start {
@@ -970,12 +1143,12 @@ main {
   .step {
     display: none;
     //opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 0.5s ease;
 
     &.active {
       display: flex;
       //opacity: 1;
-      transition: opacity 1s ease;
+      transition: opacity 0.5s ease;
     }
   }
 
@@ -1042,7 +1215,9 @@ main {
       cursor: pointer;
       transition: background 0.5s, color 0.5s;
       text-align: left;
-      display: block;
+      height: 60px;
+      display: flex;
+      align-items: center;
 
       &:hover {
         border-radius: 10px;
@@ -1091,6 +1266,22 @@ main {
     display: flex;
     align-items: center;
     position: relative;
+
+
+    @media only screen and (max-width: 1200px) {
+      .text {
+        width: 50%;
+      }
+
+      .image-main {
+        width: 50%;
+      }
+    }
+
+    @media only screen and (max-width: 991px) {
+      flex-direction: column;
+    }
+
 
     p {
       color: #2B2468;
@@ -1181,36 +1372,36 @@ main {
 
   }
 
- /* .step-2 {
-    .step-2-content {
-      visibility: hidden;
-      opacity: 0;
-      transition: visibility 2s ease, opacity 2s ease;
-    }
+  /* .step-2 {
+     .step-2-content {
+       visibility: hidden;
+       opacity: 0;
+       transition: visibility 2s ease, opacity 2s ease;
+     }
 
-    &.active {
-      .step-2-content {
-        visibility: visible;
-        opacity: 1;
-        transition: visibility 2s ease, opacity 2s ease;
-      }
-    }
-  }
-  .step-3 {
-    .step-3-content {
-      visibility: hidden;
-      opacity: 0;
-      transition: visibility 2s ease, opacity 2s ease;
-    }
+     &.active {
+       .step-2-content {
+         visibility: visible;
+         opacity: 1;
+         transition: visibility 2s ease, opacity 2s ease;
+       }
+     }
+   }
+   .step-3 {
+     .step-3-content {
+       visibility: hidden;
+       opacity: 0;
+       transition: visibility 2s ease, opacity 2s ease;
+     }
 
-    &.active {
-      .step-3-content {
-        visibility: visible;
-        opacity: 1;
-        transition: visibility 2s ease, opacity 2s ease;
-      }
-    }
-  }*/
+     &.active {
+       .step-3-content {
+         visibility: visible;
+         opacity: 1;
+         transition: visibility 2s ease, opacity 2s ease;
+       }
+     }
+   }*/
 
   .step-2-content {
     position: relative;
@@ -1289,7 +1480,7 @@ main {
     position: relative;
     width: 100%;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.2s ease;
 
     h2 {
       height: 30px;
@@ -1312,37 +1503,10 @@ main {
       gap: 20px;
     }
 
-    //.btn-field {
-    //  border-radius: 10px;
-    //  //border: 1px solid var(--Stroke, rgba(7, 2, 53, 0.20));
-    //  background: #FCFAFF;
-    //  box-shadow: 0px 6px 20px 0px rgba(10, 45, 97, 0.05), 0px 6px 20px 0px rgba(10, 45, 97, 0.05) inset;
-    //  padding: 20px 40px;
-    //  max-width: 600px;
-    //  width: 100%;
-    //  cursor: pointer;
-    //  transition: background 0.5s, color 0.5s;
-    //  text-align: left;
-    //
-    //  &:hover {
-    //    border-radius: 10px;
-    //    background: #2A0091;
-    //    box-shadow: 0px 7px 15px 0px rgba(8, 0, 52, 0.20), 0px 5px 20px 0px rgba(10, 0, 34, 0.60) inset;
-    //    text-align: center;
-    //
-    //    p {
-    //      color: #FFFFFF;
-    //    }
-    //  }
-    //
-    //  p {
-    //    color: #000;
-    //    font-size: 24px;
-    //    font-style: normal;
-    //    font-weight: 400;
-    //    line-height: 30.6px;
-    //  }
-    //}
+    .btn-field {
+      transition: max-width 0.5s ease;
+    }
+
 
     .image {
       text-align: right;
@@ -1353,7 +1517,7 @@ main {
   .step-4-content {
     width: 100%;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.2s ease;
 
     h2 {
       margin-bottom: 90px;
@@ -1376,13 +1540,25 @@ main {
     }
 
     .btn-field {
-      max-width: 150px;
+      //max-width: 150px;
+      max-width: 600px;
+      transition: max-width 0.5s ease;
     }
   }
+
+
+  //.active {
+  //  .step-4-content{
+  //    .btn-field {
+  //      max-width: 150px;
+  //    }
+  //  }
+  //}
 
   .step-5-content {
     opacity: 0;
     transition: opacity 0.5s ease;
+
     h2 {
       height: 30px;
       visibility: hidden;
@@ -1391,18 +1567,29 @@ main {
 
     .btn-field {
       max-width: 650px;
+      transition: max-width 0.5s ease;
+
+      &:nth-child(1) {
+        max-width: 150px;
+      }
+
+      &:nth-child(2) {
+        max-width: 150px;
+      }
     }
   }
 
   .step-6-content {
     opacity: 0;
     transition: opacity 0.5s ease;
+
     .input-textarea {
       margin-top: 60px;
+      position: relative;
 
       textarea {
-        width: 518px;
-        height: 378px;
+        //width: 518px;
+        //height: 378px;
         resize: none;
         border-radius: 10px;
         background: #FFF;
@@ -1414,9 +1601,11 @@ main {
         font-weight: 700;
         line-height: normal;
         padding: 30px 25px;
-        margin-left: 100px;
         border: none;
         outline: none;
+        transition: height 0.5s ease, max-width 0.5s ease;
+        height: 60px;
+        max-width: 650px;
 
         &::placeholder {
           border-bottom: 1px solid #2B2468;
@@ -1430,6 +1619,7 @@ main {
   .step-7-content {
     opacity: 0;
     transition: opacity 0.5s ease;
+
     h2 {
       height: 30px;
       visibility: hidden;
@@ -1438,18 +1628,25 @@ main {
 
     .btn-field {
       max-width: 190px;
+      transition: max-width 0.5s ease, height 0.5s ease;
+
+      &:nth-child(1) {
+        max-width: 518px;
+        height: 378px;
+      }
     }
   }
 
   .step-8-content {
     opacity: 0;
     transition: opacity 0.5s ease;
+
     .input-textarea {
       margin-top: 60px;
 
       textarea {
-        width: 518px;
-        height: 378px;
+        //width: 518px;
+        //height: 378px;
         resize: none;
         border-radius: 10px;
         background: #FFF;
@@ -1461,8 +1658,10 @@ main {
         font-weight: 700;
         line-height: normal;
         padding: 30px 25px;
-        margin-left: 100px;
         border: none;
+        transition: height 0.5s ease, max-width 0.5s ease;
+        height: 60px;
+        max-width: 190px;
 
         &::placeholder {
           border-bottom: 1px solid #2B2468;
@@ -1476,7 +1675,15 @@ main {
   .step-9-content {
     opacity: 0;
     transition: opacity 0.5s ease;
+
     .btn-field {
+      max-width: 350px;
+      transition: max-width 0.5s ease, height 0.5s ease;
+
+
+      //&:nth-child(1) {
+      //  max-width: ;
+      //}
       &:hover {
         input {
           background: #2A0091;
@@ -1507,6 +1714,9 @@ main {
   }
 
   .step-10-content {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
     p {
       max-width: 572px;
     }
@@ -1525,6 +1735,8 @@ main {
   }
 
   .step-11-content {
+    opacity: 0;
+    transition: opacity 0.5s ease;
 
     h2 {
       color: #309;
