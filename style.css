@@ -1596,10 +1596,6 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   max-width: 190px;
   transition: max-width 0.5s ease, height 0.5s ease;
 }
-.stepper .step-7-content .btn-field:nth-child(1) {
-  max-width: 518px;
-  height: 378px;
-}
 .stepper .step-8-content {
   opacity: 0;
   transition: opacity 0.5s ease;

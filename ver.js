@@ -268,6 +268,7 @@ document.addEventListener('DOMContentLoaded', function () {
         textAreaStep6.style.maxWidth = '516px';
     }
 
+
     function btnFieldsStep7ToTextarea() {
         const btnFieldsArray = Array.from(btnFieldsStep7);
         const firstElements = btnFieldsArray.slice(0, 1);
@@ -282,21 +283,19 @@ document.addEventListener('DOMContentLoaded', function () {
         const btnFieldsArray = Array.from(btnFieldsStep7);
         const firstElements = btnFieldsArray.slice(0, 1);
         firstElements.forEach(element => {
-
             element.style.height = '60px';
             element.style.maxWidth = '190px'
-            element.style.transitionDuration = '0.5s';
+            // element.style.transitionDuration = '0.5s';
         });
     }
 
     function BtnField7ToTextArea6() {
         const btnFieldsArray = Array.from(btnFieldsStep7);
         const firstElements = btnFieldsArray.slice(0, 1);
-
         firstElements.forEach(element => {
             element.style.maxWidth = '518px';
             element.style.height = '378px';
-            element.style.transitionDuration = '2.5s';
+            // element.style.transitionDuration = '2.5s';
         });
     }
 
@@ -342,7 +341,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function hideStepContent(from, to) {
         from.style.opacity = '1'
+        setTimeout(() => {
         to.style.opacity = '0'
+        }, 100);
     }
 
     function showStepContent(from, to) {
@@ -403,9 +404,16 @@ document.addEventListener('DOMContentLoaded', function () {
             hideStepContent(stepContent6, stepContent7);
 
             setTimeout(() => {
-                textAreaStep6ToFull();
+                // textAreaStep6ToFull();
+                // textAreaStep6.style.maxWidth = '190px';
+                // textAreaStep6.style.height = '60px';
+
             }, 300);
             BtnField7ToTextArea6();
+            setTimeout(() => {
+                textAreaStep6.style.maxWidth = '518px';
+                textAreaStep6.style.height = '378px';
+            }, 100);
 
         }
 
@@ -417,10 +425,12 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(() => {
                 textAreaStep8ToFull();
             }, 300);
+            setTimeout(() => {
             btnFieldsStep7ToBase();
+            }, 300);
             // textAreaStep8ToBase();
             setTimeout(() => {
-                TextareaToBtnFieldsStep9()
+                // TextareaToBtnFieldsStep9()
             }, 300);
 
         }
@@ -428,14 +438,22 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log('prev activeIndex - ', activeIndex)
 
             hideStepContent(stepContent8, stepContent9);
+            setTimeout(() => {
+                const btnFieldsArray = Array.from(btnFieldsStep9);
+                const firstElements = btnFieldsArray.slice(0, 1);
+                firstElements.forEach(element => {
+                    element.style.maxWidth = '518px';
+                    element.style.height = '378px';
+                });
+            }, 300);
 
             setTimeout(() => {
                 textAreaStep8ToFull()
-            }, 300);
-            setTimeout(() => {
-                btnFieldsStep9ToBase();
-            }, 300);
-            TextareaToBtnFieldsStep9()
+            }, 100);
+            // setTimeout(() => {
+            //     btnFieldsStep9ToBase();
+            // }, 300);
+            // TextareaToBtnFieldsStep9()
 
         }
         if (activeIndex === 9) {
@@ -607,13 +625,37 @@ document.addEventListener('DOMContentLoaded', function () {
             showStepContent(stepContent6, stepContent7);
 
             // btnFieldsStep7ToTextarea();
-            textAreaStep6ToBtnField7();
+            // textAreaStep6ToBtnField7();
+            textAreaStep6.style.height = '60px';
+            textAreaStep6.style.maxWidth = '650px';
+
             setTimeout(() => {
-                btnFieldsStep7ToBase();
+                Step7ToStep8();
             }, 100);
 
-            BtnField7ToTextArea6();
+            function Step7ToStep8() {
+                const btnFieldsArray = Array.from(btnFieldsStep7);
+                const firstElements = btnFieldsArray.slice(0, 1);
+                firstElements.forEach(element => {
+                    element.style.height = '60px';
+                    element.style.maxWidth = '190px'
+                    // element.style.transitionDuration = '0.5s';
+                });
+            }
 
+
+            // BtnField7ToTextArea6();
+
+            const btnFieldsArray = Array.from(btnFieldsStep7);
+            const firstElements = btnFieldsArray.slice(0, 1);
+            firstElements.forEach(element => {
+                element.style.maxWidth = '518px';
+                element.style.height = '378px';
+                // element.style.transitionDuration = '0.5s';
+            });
+
+            textAreaStep6.style.maxWidth = '190px';
+            textAreaStep6.style.height = '60px';
 
         }
 
@@ -632,14 +674,40 @@ document.addEventListener('DOMContentLoaded', function () {
                 errorMessage.textContent = 'To continue you need to choose 1 option from the provided answers';
                 return;
             }
-            textAreaStep6ToBtnField7();
+
             showStepContent(stepContent7, stepContent8);
 
-            BtnField7ToTextArea6();
+            // textAreaStep6ToBtnField7();
             setTimeout(() => {
-                textAreaStep8ToFull();
-            }, 100);
+            textAreaStep6.style.height = '60px';
+            textAreaStep6.style.maxWidth = '650px';
+            }, 300);
 
+            setTimeout(() => {
+            BtnField7ToTextArea6();
+            }, 200);
+            // setTimeout(() => {
+            const btnFieldsArray = Array.from(btnFieldsStep7);
+            const firstElements = btnFieldsArray.slice(0, 1);
+            firstElements.forEach(element => {
+                element.style.maxWidth = '518px';
+                element.style.height = '378px';
+            });
+            // }, 100);
+
+            setTimeout(() => {
+                // textAreaStep8ToFull();
+                textAreaStep8.style.height = '378px';
+                textAreaStep8.style.maxWidth = '516px';
+            }, 300);
+            setTimeout(() => {
+            const btnFieldsArray = Array.from(btnFieldsStep9);
+            const firstElements = btnFieldsArray.slice(0, 1);
+            firstElements.forEach(element => {
+                element.style.maxWidth = '516px';
+                element.style.height = '378px';
+            });
+            }, 300);
         }
 
         if (activeIndex === 7) {
@@ -674,10 +742,22 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
+
+
             showStepContent(stepContent8, stepContent9);
+            setTimeout(() => {
+            }, 300);
 
             textAreaStep8ToBtnFieldsStep9();
-            step8ToStep9();
+            // step8ToStep9();
+            setTimeout(() => {
+                const btnFieldsArray = Array.from(btnFieldsStep9);
+                const firstElements = btnFieldsArray.slice(0, 1);
+                firstElements.forEach(element => {
+                    element.style.maxWidth = '350px';
+                    element.style.height = '60px';
+                });
+            }, 100);
         }
 
         if (activeIndex === 8) {

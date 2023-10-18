@@ -2008,10 +2008,10 @@ main {
       max-width: 190px;
       transition: max-width 0.5s ease, height 0.5s ease;
 
-      &:nth-child(1) {
-        max-width: 518px;
-        height: 378px;
-      }
+      //&:nth-child(1) {
+      //  max-width: 518px;
+      //  height: 378px;
+      //}
     }
   }
 
