@@ -17,7 +17,6 @@
   font-family: "Liberation Sans", sans-serif;
   list-style: none;
   text-decoration: none;
-  outline: 1px solid red;
 }
 
 main {
@@ -80,6 +79,11 @@ main.step-1 .left-clouds .clt-3 {
   left: -1246px;
   top: -810px;
 }
+@media only screen and (max-width: 991px) {
+  main.step-2 {
+    min-height: 1258px;
+  }
+}
 main.step-2 .step-1-content .image-main {
   position: absolute;
   bottom: -1500px;
@@ -98,6 +102,11 @@ main.step-2 .left-clouds .clt-3 {
   left: -990px;
   top: -145px;
 }
+@media only screen and (max-width: 991px) {
+  main.step-3 {
+    min-height: 1398px;
+  }
+}
 main.step-3 .left-clouds .clt-1 {
   left: -990px;
   top: -228px;
@@ -109,6 +118,11 @@ main.step-3 .left-clouds .clt-2 {
 main.step-3 .left-clouds .clt-3 {
   left: -929px;
   top: -203px;
+}
+@media only screen and (max-width: 991px) {
+  main.step-4 {
+    min-height: 1107px;
+  }
 }
 main.step-4 .left-clouds .clt-1 {
   left: -989px;
@@ -122,6 +136,11 @@ main.step-4 .left-clouds .clt-3 {
   left: -989px;
   top: -75px;
 }
+@media only screen and (max-width: 991px) {
+  main.step-5 {
+    min-height: 1467px;
+  }
+}
 main.step-5 .left-clouds .clt-1 {
   left: -1047px;
   top: -216px;
@@ -133,6 +152,11 @@ main.step-5 .left-clouds .clt-2 {
 main.step-5 .left-clouds .clt-3 {
   left: -990px;
   top: -145px;
+}
+@media only screen and (max-width: 991px) {
+  main.step-6 {
+    min-height: 1467px;
+  }
 }
 main.step-6 .left-clouds .clt-1 {
   left: -990px;
@@ -146,6 +170,11 @@ main.step-6 .left-clouds .clt-3 {
   left: -929px;
   top: -203px;
 }
+@media only screen and (max-width: 991px) {
+  main.step-7 {
+    min-height: 1281px;
+  }
+}
 main.step-7 .left-clouds .clt-1 {
   left: -989px;
   top: -368px;
@@ -157,6 +186,11 @@ main.step-7 .left-clouds .clt-2 {
 main.step-7 .left-clouds .clt-3 {
   left: -989px;
   top: -75px;
+}
+@media only screen and (max-width: 991px) {
+  main.step-8 {
+    min-height: 1467px;
+  }
 }
 main.step-8 .left-clouds .clt-1 {
   left: -1047px;
@@ -170,6 +204,11 @@ main.step-8 .left-clouds .clt-3 {
   left: -990px;
   top: -145px;
 }
+@media only screen and (max-width: 991px) {
+  main.step-9 {
+    min-height: 1238px;
+  }
+}
 main.step-9 .left-clouds .clt-1 {
   left: -990px;
   top: -228px;
@@ -182,6 +221,11 @@ main.step-9 .left-clouds .clt-3 {
   left: -929px;
   top: -203px;
 }
+@media only screen and (max-width: 991px) {
+  main.step-10 {
+    min-height: 1103px;
+  }
+}
 main.step-10 .left-clouds .clt-1 {
   left: -1246px;
   top: -810px;
@@ -193,6 +237,11 @@ main.step-10 .left-clouds .clt-2 {
 main.step-10 .left-clouds .clt-3 {
   left: -1246px;
   top: -810px;
+}
+@media only screen and (max-width: 991px) {
+  main.step-11 {
+    min-height: 971px;
+  }
 }
 main.step-11 .left-clouds {
   display: none;
@@ -560,12 +609,24 @@ main.step-11 .th-1 {
   opacity: 1;
   transform: none;
 }
+@media only screen and (max-width: 991px) {
+  main.step-11 .th-1 {
+    left: -468px;
+    bottom: 11px;
+    max-width: 755px;
+  }
+}
 main.step-11 .th-2 {
   z-index: 8;
   left: 38px;
   bottom: -324px;
   opacity: 1;
   transform: none;
+}
+@media only screen and (max-width: 991px) {
+  main.step-11 .th-2 {
+    display: none;
+  }
 }
 main.step-11 .th-3 {
   z-index: 9;
@@ -574,6 +635,13 @@ main.step-11 .th-3 {
   opacity: 1;
   transform: none;
   left: auto;
+}
+@media only screen and (max-width: 991px) {
+  main.step-11 .th-3 {
+    right: -519px;
+    bottom: 111px;
+    max-width: 755px;
+  }
 }
 
 .main_content {
@@ -584,6 +652,12 @@ main.step-11 .th-3 {
   position: relative;
   max-height: 1080px;
   padding: 0 15px;
+}
+@media only screen and (max-width: 991px) {
+  .main_content {
+    height: auto;
+    max-height: none;
+  }
 }
 .main_content .step-10-img {
   display: none;
@@ -606,6 +680,23 @@ main.step-11 .th-3 {
   bottom: -63px;
   left: 50%;
   transform: translateX(-50%);
+}
+@media only screen and (max-width: 420px) {
+  .main_content.step-10 .step-10-img {
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    min-width: 1200px;
+    min-height: 200px;
+    left: -500px;
+    transform: none;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .main_content.step-10 .step-10-img img {
+    width: 100%;
+    height: auto;
+  }
 }
 .main_content.step-10 .step-10-img-anim .anim-10-1 {
   z-index: 9;
@@ -652,6 +743,11 @@ main.step-11 .th-3 {
   font-weight: 400;
   line-height: 30px;
 }
+@media only screen and (max-width: 991px) {
+  .err {
+    font-size: 20px !important;
+  }
+}
 .err.step-2 {
   bottom: -50px;
 }
@@ -659,11 +755,47 @@ main.step-11 .th-3 {
   max-width: 600px;
   bottom: -50px;
 }
+@media only screen and (max-width: 991px) {
+  .err.step-3 {
+    bottom: -74px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .err.step-4 {
+    bottom: -74px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .err.step-5 {
+    bottom: -74px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .err.step-6 {
+    bottom: -55px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .err.step-7 {
+    bottom: -74px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .err.step-8 {
+    bottom: -55px;
+  }
+}
 
 .logo {
   position: absolute;
   right: 0;
   top: 69px;
+}
+@media only screen and (max-width: 991px) {
+  .logo {
+    top: 17px;
+    right: 34px;
+  }
 }
 
 .step-image {
@@ -672,10 +804,35 @@ main.step-11 .th-3 {
   right: 0;
   transition: right 2s ease, bottom 2s ease;
 }
+@media only screen and (max-width: 991px) {
+  .step-image {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media only screen and (max-width: 650px) {
+  .step-image {
+    left: 0;
+    transform: none;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .step-image img {
+    max-height: 332px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+}
 .step-image.step-1 {
   position: absolute;
   bottom: 192px;
   right: 0;
+}
+
+main .step-1 .logo {
+  display: none;
 }
 main .step-1 .step-image {
   bottom: -1000px;
@@ -698,10 +855,29 @@ main .step-1 .step-image.step-1 {
     object-fit: contain;
   }
 }
+@media only screen and (max-width: 991px) {
+  main .step-1 .step-image.step-1 {
+    bottom: 0;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  main .step-1 .step-image.step-1 img {
+    height: 397px;
+  }
+}
 main.step-2 .step-image.step-1 {
   bottom: -1000px;
   right: -1000px;
   transition: right 3s ease, bottom 3s ease;
+}
+main.step-2 .slider {
+  padding-top: 130px;
+}
+@media only screen and (max-width: 991px) {
+  main.step-2 .slider {
+    min-height: 1258px;
+  }
 }
 main .step-3-content {
   opacity: 0;
@@ -713,6 +889,75 @@ main.step-3 .step-3-content {
   visibility: visible;
   transition: visibility 0.5s ease, opacity 0.5s ease;
 }
+main.step-3 .slider {
+  padding-top: 130px;
+}
+@media only screen and (max-width: 991px) {
+  main.step-3 .slider {
+    min-height: 1398px;
+  }
+}
+main.step-4 .slider {
+  padding-top: 130px;
+}
+@media only screen and (max-width: 991px) {
+  main.step-4 .slider {
+    min-height: 1107px;
+  }
+}
+main.step-5 .slider {
+  padding-top: 130px;
+}
+@media only screen and (max-width: 991px) {
+  main.step-5 .slider {
+    min-height: 1467px;
+  }
+}
+main.step-6 .slider {
+  padding-top: 130px;
+}
+@media only screen and (max-width: 991px) {
+  main.step-6 .slider {
+    min-height: 1467px;
+  }
+}
+main.step-7 .slider {
+  padding-top: 130px;
+}
+@media only screen and (max-width: 991px) {
+  main.step-7 .slider {
+    min-height: 1281px;
+  }
+}
+main.step-8 .slider {
+  padding-top: 130px;
+}
+@media only screen and (max-width: 991px) {
+  main.step-8 .slider {
+    min-height: 1467px;
+  }
+}
+main.step-9 .slider {
+  padding-top: 130px;
+}
+@media only screen and (max-width: 991px) {
+  main.step-9 .slider {
+    min-height: 1238px;
+  }
+}
+main.step-10 .slider {
+  padding-top: 130px;
+}
+@media only screen and (max-width: 991px) {
+  main.step-10 .slider {
+    min-height: 1103px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  main.step-11 .slider {
+    min-height: 971px;
+  }
+}
 main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .step-image.step-1, main.step-6 .step-image.step-1, main.step-7 .step-image.step-1, main.step-8 .step-image.step-1, main.step-9 .step-image.step-1, main.step-10 .step-image.step-1, main.step-11 .step-image.step-1 {
   display: none;
 }
@@ -722,6 +967,13 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   position: relative;
   top: 50%;
   z-index: 999;
+}
+@media only screen and (max-width: 991px) {
+  .slider {
+    position: static;
+    transform: none;
+    padding: 50px 0 25px;
+  }
 }
 .slider-btn {
   position: absolute;
@@ -736,6 +988,21 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 .slider-btn.start {
   bottom: 25px;
   justify-content: flex-end;
+}
+@media only screen and (max-width: 991px) {
+  .slider-btn.start {
+    right: 15px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .slider-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    max-width: 155px;
+    right: 20px;
+    bottom: 255px;
+  }
 }
 .slider-btn .btn {
   cursor: pointer;
@@ -835,6 +1102,9 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   display: flex;
   transition: opacity 0.5s ease;
 }
+.stepper .step.step-11 {
+  min-height: 971px;
+}
 .stepper h1 {
   color: #1D0370;
   text-align: center;
@@ -845,6 +1115,13 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   line-height: normal;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 991px) {
+  .stepper h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 55px;
+  }
+}
 .stepper h2 {
   color: #060232;
   text-align: center;
@@ -852,6 +1129,12 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   font-style: normal;
   font-weight: 700;
   line-height: 30px;
+}
+@media only screen and (max-width: 991px) {
+  .stepper h2 {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 .stepper .step > div {
   width: 100%;
@@ -867,11 +1150,21 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   line-height: 30px;
   max-width: 786px;
 }
+@media only screen and (max-width: 991px) {
+  .stepper .step p {
+    max-width: 100%;
+  }
+}
 .stepper .step .btn-field-group {
   margin-top: 60px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+@media only screen and (max-width: 991px) {
+  .stepper .step .btn-field-group {
+    position: relative;
+  }
 }
 .stepper .step .btn-field {
   border-radius: 10px;
@@ -886,6 +1179,12 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   height: 60px;
   display: flex;
   align-items: center;
+}
+@media only screen and (max-width: 991px) {
+  .stepper .step .btn-field {
+    height: 80px !important;
+    padding: 20px;
+  }
 }
 .stepper .step .btn-field:hover {
   border-radius: 10px;
@@ -928,6 +1227,17 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   .stepper .step-1-content .text {
     width: 50%;
   }
+}
+@media only screen and (max-width: 991px) {
+  .stepper .step-1-content .text {
+    width: 100%;
+    position: relative;
+  }
+}
+.stepper .step-1-content .text .err {
+  bottom: -9px;
+}
+@media only screen and (max-width: 1200px) {
   .stepper .step-1-content .image-main {
     width: 50%;
   }
@@ -951,10 +1261,21 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 .stepper .step-1-content .text-btn {
   margin-right: 51px;
 }
+@media only screen and (max-width: 991px) {
+  .stepper .step-1-content .text-btn {
+    margin-right: 0;
+  }
+}
 .stepper .step-1-content .input-email {
   margin-top: 120px;
   max-width: 429px;
   width: 100%;
+}
+@media only screen and (max-width: 991px) {
+  .stepper .step-1-content .input-email {
+    max-width: 100%;
+    margin-top: 50px;
+  }
 }
 .stepper .step-1-content .input-email input {
   border: none;
@@ -979,6 +1300,11 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   margin-top: 21px;
   display: flex;
   justify-content: flex-end;
+}
+@media only screen and (max-width: 991px) {
+  .stepper .step-1-content .input-email-btn {
+    margin-bottom: 50px;
+  }
 }
 .stepper .step-1-content .input-email-btn button {
   border-radius: 20px;
@@ -1012,6 +1338,11 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   visibility: hidden;
   opacity: 0;
 }
+@media only screen and (max-width: 991px) {
+  .stepper .step-1-content .image-main {
+    max-height: 317px;
+  }
+}
 .stepper .step-2-content {
   position: relative;
   width: 100%;
@@ -1020,6 +1351,11 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 }
 .stepper .step-2-content h2 {
   margin-bottom: 90px;
+}
+@media only screen and (max-width: 991px) {
+  .stepper .step-2-content h2 {
+    margin-bottom: 20px;
+  }
 }
 .stepper .step-2-content p {
   color: #060232;
@@ -1038,6 +1374,21 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   position: relative;
   min-height: 75px;
 }
+@media only screen and (max-width: 991px) {
+  .stepper .step-2-content .emoji {
+    margin-top: 50px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .stepper .step-2-content .emoji-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
 .stepper .step-2-content .emoji-excellent {
   position: absolute;
   left: 0;
@@ -1053,6 +1404,17 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 }
 .stepper .step-2-content .emoji-icon {
   cursor: pointer;
+  height: 75px;
+}
+@media only screen and (max-width: 991px) {
+  .stepper .step-2-content .emoji-icon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .stepper .step-2-content .emoji-icon img {
   height: 75px;
@@ -1095,6 +1457,12 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   flex-direction: column;
   gap: 20px;
 }
+@media only screen and (max-width: 991px) {
+  .stepper .step-3-content .btn-field-group {
+    gap: 30px;
+    margin-top: 50px;
+  }
+}
 .stepper .step-3-content .btn-field {
   transition: max-width 0.5s ease;
 }
@@ -1110,6 +1478,13 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 .stepper .step-4-content h2 {
   margin-bottom: 90px;
 }
+@media only screen and (max-width: 991px) {
+  .stepper .step-4-content h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+}
 .stepper .step-4-content p {
   color: #060232;
   font-size: 24px;
@@ -1124,6 +1499,13 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   flex-direction: column;
   gap: 20px;
 }
+@media only screen and (max-width: 991px) {
+  .stepper .step-4-content .btn-field-group {
+    gap: 30px;
+    margin-top: 50px;
+    position: relative;
+  }
+}
 .stepper .step-4-content .btn-field {
   max-width: 600px;
   transition: max-width 0.5s ease;
@@ -1136,6 +1518,13 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   height: 30px;
   visibility: hidden;
   margin-bottom: 90px;
+}
+@media only screen and (max-width: 991px) {
+  .stepper .step-5-content h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
 }
 .stepper .step-5-content .btn-field {
   max-width: 650px;
@@ -1150,6 +1539,11 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 .stepper .step-6-content {
   opacity: 0;
   transition: opacity 0.5s ease;
+}
+@media only screen and (max-width: 991px) {
+  .stepper .step-6-content h2 {
+    margin-bottom: 20px;
+  }
 }
 .stepper .step-6-content .input-textarea {
   margin-top: 60px;
@@ -1173,6 +1567,12 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   height: 60px;
   max-width: 650px;
 }
+@media only screen and (max-width: 991px) {
+  .stepper .step-6-content .input-textarea textarea {
+    width: 100%;
+    height: 585px !important;
+  }
+}
 .stepper .step-6-content .input-textarea textarea::placeholder {
   border-bottom: 1px solid #2B2468;
   padding-bottom: 12px;
@@ -1187,6 +1587,11 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   visibility: hidden;
   margin-bottom: 90px;
 }
+@media only screen and (max-width: 991px) {
+  .stepper .step-7-content h2 {
+    margin-bottom: 20px;
+  }
+}
 .stepper .step-7-content .btn-field {
   max-width: 190px;
   transition: max-width 0.5s ease, height 0.5s ease;
@@ -1198,6 +1603,11 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 .stepper .step-8-content {
   opacity: 0;
   transition: opacity 0.5s ease;
+}
+@media only screen and (max-width: 991px) {
+  .stepper .step-8-content h2 {
+    margin-bottom: 20px;
+  }
 }
 .stepper .step-8-content .input-textarea {
   margin-top: 60px;
@@ -1219,6 +1629,12 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   height: 60px;
   max-width: 190px;
 }
+@media only screen and (max-width: 991px) {
+  .stepper .step-8-content .input-textarea textarea {
+    width: 100%;
+    height: 585px !important;
+  }
+}
 .stepper .step-8-content .input-textarea textarea::placeholder {
   border-bottom: 1px solid #2B2468;
   padding-bottom: 12px;
@@ -1227,6 +1643,11 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
 .stepper .step-9-content {
   opacity: 0;
   transition: opacity 0.5s ease;
+}
+@media only screen and (max-width: 991px) {
+  .stepper .step-9-content h2 {
+    margin-bottom: 20px;
+  }
 }
 .stepper .step-9-content .btn-field {
   max-width: 350px;
@@ -1256,8 +1677,14 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   opacity: 0;
   transition: opacity 0.5s ease;
 }
+@media only screen and (max-width: 991px) {
+  .stepper .step-10-content h2 {
+    margin-bottom: 20px;
+  }
+}
 .stepper .step-10-content p {
   max-width: 572px;
+  font-size: 20px;
 }
 .stepper .step-11-content {
   opacity: 0;
@@ -1272,10 +1699,32 @@ main.step-3 .step-image.step-1, main.step-4 .step-image.step-1, main.step-5 .ste
   margin-top: 211px;
   margin-bottom: 0;
   text-align: left;
+  position: relative;
+  z-index: 20;
+}
+@media only screen and (max-width: 991px) {
+  .stepper .step-11-content h2 {
+    font-size: 86px;
+    line-height: 90px;
+    margin-top: 200px;
+  }
 }
 .stepper .step-11-content img {
   display: flex;
   margin: -180px 0 0 auto;
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+}
+@media only screen and (max-width: 991px) {
+  .stepper .step-11-content img {
+    position: absolute;
+    bottom: -80px;
+    max-width: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+  }
 }
 
 button.prev-button {

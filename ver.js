@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         const isFirstStep = activeIndex === 0;
-        prevButton.style.display = isFirstStep ? 'none' : 'block';
+        prevButton.style.display = isFirstStep ? 'none' : 'flex';
         sliderButtons.classList.toggle('start', isFirstStep);
         nextButton.classList.toggle('start', isFirstStep);
 
@@ -413,7 +413,6 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log('prev activeIndex - ', activeIndex)
 
             hideStepContent(stepContent7, stepContent8);
-
 
             setTimeout(() => {
                 textAreaStep8ToFull();
