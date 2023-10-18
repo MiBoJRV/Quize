@@ -429,10 +429,14 @@ document.addEventListener('DOMContentLoaded', function () {
             btnFieldsStep7ToBase();
             }, 300);
             // textAreaStep8ToBase();
-            setTimeout(() => {
-                // TextareaToBtnFieldsStep9()
-            }, 300);
+            // setTimeout(() => {
+            //     // TextareaToBtnFieldsStep9()
+            // }, 300);
 
+            setTimeout(() => {
+                textAreaStep8.style.maxWidth = '190px';
+                textAreaStep8.style.height = '60px';
+            }, 300);
         }
         if (activeIndex === 8) {
             console.log('prev activeIndex - ', activeIndex)
@@ -454,7 +458,18 @@ document.addEventListener('DOMContentLoaded', function () {
             //     btnFieldsStep9ToBase();
             // }, 300);
             // TextareaToBtnFieldsStep9()
-
+            setTimeout(() => {
+                const btnFieldsArray = Array.from(btnFieldsStep9);
+                const firstElements = btnFieldsArray.slice(0, 1);
+                firstElements.forEach(element => {
+                    element.style.maxWidth = '350px';
+                    element.style.height = '60px';
+                });
+            }, 100);
+            setTimeout(() => {
+            textAreaStep8.style.maxWidth = '518px';
+            textAreaStep8.style.height = '378px';
+            }, 500);
         }
         if (activeIndex === 9) {
             console.log('prev activeIndex - ', activeIndex)
@@ -758,6 +773,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     element.style.height = '60px';
                 });
             }, 100);
+
         }
 
         if (activeIndex === 8) {
