@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function hideStepContent(from, to) {
         from.style.opacity = '1'
         setTimeout(() => {
-        to.style.opacity = '0'
+            to.style.opacity = '0'
         }, 100);
     }
 
@@ -426,58 +426,61 @@ document.addEventListener('DOMContentLoaded', function () {
                 textAreaStep8ToFull();
             }, 300);
             setTimeout(() => {
-            btnFieldsStep7ToBase();
+                btnFieldsStep7ToBase();
             }, 300);
-            // textAreaStep8ToBase();
-            // setTimeout(() => {
-            //     // TextareaToBtnFieldsStep9()
-            // }, 300);
+
 
             setTimeout(() => {
                 textAreaStep8.style.maxWidth = '190px';
                 textAreaStep8.style.height = '60px';
             }, 300);
         }
+
         if (activeIndex === 8) {
             console.log('prev activeIndex - ', activeIndex)
 
             hideStepContent(stepContent8, stepContent9);
-            setTimeout(() => {
-                const btnFieldsArray = Array.from(btnFieldsStep9);
-                const firstElements = btnFieldsArray.slice(0, 1);
-                firstElements.forEach(element => {
-                    element.style.maxWidth = '518px';
-                    element.style.height = '378px';
-                });
-            }, 300);
 
-            setTimeout(() => {
-                textAreaStep8ToFull()
-            }, 100);
             // setTimeout(() => {
-            //     btnFieldsStep9ToBase();
+            //     textAreaStep8.style.maxWidth = '518px';
+            //     textAreaStep8.style.height = '378px';
+            // }, 100);
+
+            // setTimeout(() => {
+            //     const btnFieldsArray = Array.from(btnFieldsStep9);
+            //     const firstElements = btnFieldsArray.slice(0, 1);
+            //     firstElements.forEach(element => {
+            //         element.style.maxWidth = '518px';
+            //         element.style.height = '378px';
+            //     });
             // }, 300);
-            // TextareaToBtnFieldsStep9()
-            setTimeout(() => {
-                const btnFieldsArray = Array.from(btnFieldsStep9);
-                const firstElements = btnFieldsArray.slice(0, 1);
-                firstElements.forEach(element => {
-                    element.style.maxWidth = '350px';
-                    element.style.height = '60px';
-                });
-            }, 100);
+
+            // setTimeout(() => {
+            //     // textAreaStep8ToFull()
+            //     textAreaStep8.style.maxWidth = '518px';
+            //     textAreaStep8.style.height = '378px';
+            // }, 100);
+
+            // setTimeout(() => {
+            //     const btnFieldsArray = Array.from(btnFieldsStep9);
+            //     const firstElements = btnFieldsArray.slice(0, 1);
+            //     firstElements.forEach(element => {
+            //         element.style.maxWidth = '350px';
+            //         element.style.height = '60px';
+            //     });
+            // }, 100);
             setTimeout(() => {
             textAreaStep8.style.maxWidth = '518px';
             textAreaStep8.style.height = '378px';
-            }, 500);
+            }, 300);
+
+
         }
         if (activeIndex === 9) {
             console.log('prev activeIndex - ', activeIndex)
 
             hideStepContent(stepContent9, stepContent10);
             btnFieldsStep9ToBase();
-
-
         }
 
         if (activeIndex === 10) {
@@ -485,7 +488,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             hideStepContent(stepContent10, stepContent11);
         }
-
 
         if (activeIndex > 0) {
             activeIndex--;
@@ -694,12 +696,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // textAreaStep6ToBtnField7();
             setTimeout(() => {
-            textAreaStep6.style.height = '60px';
-            textAreaStep6.style.maxWidth = '650px';
+                textAreaStep6.style.height = '60px';
+                textAreaStep6.style.maxWidth = '650px';
             }, 300);
 
             setTimeout(() => {
-            BtnField7ToTextArea6();
+                BtnField7ToTextArea6();
             }, 200);
             // setTimeout(() => {
             const btnFieldsArray = Array.from(btnFieldsStep7);
@@ -716,12 +718,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 textAreaStep8.style.maxWidth = '516px';
             }, 300);
             setTimeout(() => {
-            const btnFieldsArray = Array.from(btnFieldsStep9);
-            const firstElements = btnFieldsArray.slice(0, 1);
-            firstElements.forEach(element => {
-                element.style.maxWidth = '516px';
-                element.style.height = '378px';
-            });
+                const btnFieldsArray = Array.from(btnFieldsStep9);
+                const firstElements = btnFieldsArray.slice(0, 1);
+                firstElements.forEach(element => {
+                    element.style.maxWidth = '516px';
+                    element.style.height = '378px';
+                });
             }, 300);
         }
 
@@ -756,7 +758,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 errorMessage.textContent = 'To continue you need to fill in the answer field (at least 20 characters).';
                 return;
             }
-
 
 
             showStepContent(stepContent8, stepContent9);
